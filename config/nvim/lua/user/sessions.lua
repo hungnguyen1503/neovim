@@ -19,7 +19,3 @@ sessions_dir = Path:new(vim.fn.stdpath('data'), 'sessions'), -- The directory wh
 	autosave_only_in_session = false, -- Always autosaves session. If true, only autosaves after a session is active.
 	max_path_length = 80,  -- Shorten the display path if length exceeds this threshold. Use 0 if don't want to shorten the path at all.
 })
-
-vim.keymap.set("", "sl", ':SessionManager load_last_session<CR>', { noremap = false, silent = true })
-vim.keymap.set("", "ss", ':SessionManager save_current_session<CR>:lua require("notify")("Session is saved to your SessionManager  ", "info",{title = "Save session  "})<CR>:noh<CR>', { noremap = false, silent = true })
-vim.keymap.set("", "sd", ':SessionManager delete_session<CR>', { noremap = false, silent = true })

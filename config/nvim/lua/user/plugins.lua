@@ -146,7 +146,7 @@ return {
 			require("user.telescope")
 		end,
 		keys = {
-			{ "f", mode = "n" },
+			{ "<space>", mode = "n" },
 		},
 	},
 	{
@@ -579,7 +579,9 @@ return {
 			require("user.sessions")
 		end,
 		keys = {
-			{ "s", mode = "n" },
+			{ "sl", "<cmd>SessionManager load_last_session<CR>", mode = "n", silent = true, noremap = true },
+			{ "ss", "<cmd>SessionManager save_current_session<CR>", mode = "n", silent = true, noremap = true },
+			{ "sd", "<cmd>SessionManager delete_session<CR>", mode = "n", silent = true, noremap = true },
 		},
 	},
 
@@ -631,5 +633,7 @@ return {
 }
 
 -- Feature requests
+-- TODO: Update treesitter to newest commits
+-- TODO: Add local-highlight.nvim
 -- TODO: Update nvim-scrollbar
 -- TODO: Update from tabline to barbar if it has updated tab icon highlight groups
